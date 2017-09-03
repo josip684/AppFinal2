@@ -1,0 +1,906 @@
+{
+  "learnJava": [
+    {
+      "layoutID":"3",
+      "question":"To distribute your application to different platforms, how many Java versions do you need to create?",
+      "choiceA":"Just one version",
+      "choiceB":"One for each platform",
+      "choiceC":"Two versions",
+      "correctAnswer":"Just one version",
+      "_title": "Basic Concepts",
+      "_subtitle": "Introduction to Java",
+      "cast": [
+        {
+          "name": "Welcome to Java!"
+        }
+        
+      ],
+      "story": "Java is a high level, modern programming language designed in the early 1990s by Sun Microsystems, and currently owned by Oracle.\n\nJava is Platform Independent, which means that you only need to write the program once to be able to run it on a number of different platforms!Java is portable, robust, and dynamic, with the ability to fit the needs of virtually any type of application.\n\nJava guarantees that you'll be able to Write Once, Run Anywhere.\n\nMore than 3 billion devices run Java. Java is used to develop apps for Google's Android OS, various Desktop Applications, such as media players, antivirus programs, Web Applications, Enterprise Applications (i.e. banking), and many more!"
+    },
+    {
+      "layoutID":"1",
+      "question":"Which method is the starting point for all Java programs?",
+      "correctAnswer":"main",
+      "_title": "Basic Concepts",
+      "_subtitle": "A Hello World Program",
+      "cast": [
+        {
+          "name": "(1) Your First Java Program"
+        },
+	{
+          "name": "(2) The main Method"
+        },
+	{
+          "name": "(3) System.out.println()"
+        },
+	{
+          "name": "(4) Semicolons in Java"
+        }
+      ],
+      "story": "(1) Let's start by creating a simple program that prints 'Hello World' to the screen.\n\nclass MyClass{\n public static void  main(String[ ] args) {\n  System.out.println('Hello World');\n }\n}\n In Java, every line of code that can actually run needs to be inside a class.In our example, we named the class MyClass. You will learn more about classes in the upcoming modules.\n\nIn Java, each application has an entry point, or a starting point, which is a method called main. Along with main, the keywords public and static will also be explained later.\n\nAs a summary:\n- Every program in Java must have a class.\n- Every Java program starts from the main method.\n\n\n(2) To run our program, the main method must be identical to this signature:\n\npublic static void main(String[ ] args)\n\n- public: anyone can access it\n- static: method can be run without creating an instance of the class containing the main method\n- void: method doesn't return any value\n- main: the name of the method\n\nFor example, the following code declares a method called test, which does not return anything and has no parameters:\n\nvoid test()\n\nThe method's parameters are declared inside the parentheses that follow the name of the method. For main, it's an array of strings called args. We will use it in our next lesson, so don't worry if you don't understand it all now.\n\n\n(3) Next is the body of the main method, enclosed in curly braces:\n\n{\nSystem.out.println('Hello World!');\n}\n\nThe println method prints a line of text to the screen.\nThe System class and its out stream are used to access the println method.\n\nIn classes, methods, and other flow-control structures code is always enclosed in curly braces { }.\n\n\n(4) You can pass a different text as the parameter to the println method to print it.\n\nclass MyClass {\n public static void main(String[ ] args) {\n  System.out.println('I am learning Java');\n }\n}\n\nIn Java, each code statement must end with a semicolon.\n\nRemember: do not use semicolons after method and class declarations that follow with the body defined using the curly braces."
+    },
+	{     
+	    "layoutID":"2",
+	    "question": "Make this text a multi-line comment.",
+	    "tv1":   "",
+      "pt1":   "/*",
+      "tv2":   "some\n*comment text",
+      "pt2":   "*/",
+      "tv3":    "",
+      "_title": "Basic Concepts",
+      "_subtitle": "Java Comments",
+      "cast": [
+        {
+          "name": "(1) Comments"
+        },
+        {
+          "name": "(2) Multi-Line Comments"
+        },
+        {
+          "name": "(3) Documentation Comments"
+        }
+      ],
+      "story": "(1) The purpose of including comments in your code is to explain what the code is doing.Java supports both single and multi-line comments. All characters that appear within a comment are ignored by the Java compiler.\n\nA single-line comment starts with two forward slashes and continues until it reaches the end of the line.\nFor example: \n\// this is a single-line comment\nx = 5; // a single-line comment after code\n\nAdding comments as you write code is a good practice, because they provide clarification and understanding when you need to refer back to it, as well as for others who might need to read it.\n\n\n(2) Java also supports comments that span multiple lines.You start this type of comment with a forward slash followed by an asterisk, and end it with an asterisk followed by a forward slash.\nFor example:\n\n/*  This is also a\n  comment spanning\n   multiple lines*/\n\nNote that Java does not support nested multi-line comments. However, you can nest single-line comments within multi-line comments.\n\n/* This is a single-line comment:\n\n // a single-line comment\n\n*/\n\n\n(3) Documentation comments are special comments that have the appearance of multi-line comments, with the difference being that they generate external documentation of your source code. These begin with a forward slash followed by two asterisks, and end with an asterisk followed by a forward slash.\nFor example:\n\n/** This is a documentation comment */\n\n/** This is also a\ndocumentation comment */\n\nJavadoc is a tool which comes with JDK and it is used for generating Java code documentation in HTML format from Java source code which has required documentation in a predefined format.\n\nWhen a documentation comment begins with more than two asterisks, Javadoc assumes that you want to create a 'box' around the comment in the source code. It simply ignores the extra asterisks.\nFor example:\n\n/**********************\n\nThis is the start of a method\n\n***********************/\n\nThis will retain just the text 'This is the start of a method' for the documentation."
+    },
+	{
+	    "layoutID":"3",
+      "question":"Which variable type would you use for a city name?",
+      "choiceA":"int",
+      "choiceB":"double",
+      "choiceC":"String",
+      "correctAnswer":"String",
+      "_title": "Basic Concepts",
+      "_subtitle": "Variables",
+      "cast": [
+        {
+          "name": "Variables"
+        }
+      ],
+      "story": "Variables store data for processing.\nA variable is given a name (or identifier), such as area, age, height, and the like. The name uniquely identifies each variable, assigning a value to the variable and retrieving the value stored.\n\nVariables have types. Some examples:\n- int: for integers (whole numbers) such as 123 and -456\n- double: for floating-point or real numbers with optional decimal points and fractional parts in fixed or scientific notations, such as 3.1416, -55.66.\n- String: for texts such as 'Hello' or 'Good Morning!'. Text strings are enclosed within double quotes.\n\nYou can declare a variable of a type and assign it a value. Example:\n\nString name = 'David';\n\nThis creates a variable called name of type String, and assigns it the value 'David'.\n\nIt is important to note that a variable is associated with a type, and is only capable of storing values of that particular type. For example, an int variable can store integer values, such as 123; but it cannot store real numbers, such as 12.34, or texts, such as 'Hello'.\n\nExaples of variable declarations:\n\nclass MyClass {\n public static void main(String[ ] args) {\n   String name ='David';\n  int age = 42;\n  double score = 15.9;\n  char group = 'Z';\n }\n}\n\nchar stands for character and holds a single character.\n\nAnother type is the Boolean type, which has only two possible values: true and false.This data type is used for simple flags that track true/false conditions.\nFor example:\n\nboolean online = true;\n\nYou can use a comma-separated list to declare more than one variable of the specified type. Example: int a = 42, b = 11;"
+    },
+    {
+      "layoutID":"1",
+      "question":"What value is stored in the result variable?\nint x = 8, y = 5;\nint result = x % y;",
+      "correctAnswer":"3",
+      "_title": "Basic Concepts",
+      "_subtitle": "Primitive Operators",
+      "cast": [
+        {
+          "name": "(1) The Math Operators"
+        },
+        {
+          "name": "(2) Addition"
+        },
+		{
+          "name": "(3) Subtraction"
+        },
+        {
+          "name": "(4) Multiplication"
+        },
+		{
+          "name": "(5) Division"
+        },
+		{
+          "name": "(6) Modulo"
+        }
+      ],
+      "story": "(1) Java provides a rich set of operators to use in manipulating variables. A value used on either side of an operator is called an operand.\n For example, in the expression below, the numbers 6 and 3 are operands of the plus operator:\n\nint x = 6 + 3;\n\nJava arithmetic operators:\n+ addition\n- subtraction\n* multiplication\n/ division\n% modulo\n\nArithmetic operators are used in mathematical expressions in the same way that they are used in algebraic equations.\n\n\n(2) The + operator adds together two values, such as two constants, a constant and a variable, or a variable and a variable. Here are a few examples of addition:\n\nint sum1 = 50 + 10;\nint sum2 = sum1 + 66; \nint sum3 = sum2 + sum2;\n\n(3) The - operator subtracts one value from another.\n\nint sum1 = 1000 - 10;\nint sum2 = sum1 - 5;\nint sum3 = sum1 - sum2;\n\n\n(4) The * operator multiplies two values.\n\nint sum1 = 1000 * 2;\nint sum2 = sum1 * 10;\nint sum3 = sum1 * sum2;\n\n\n(5) The / operator divides one value by another.\n\nint sum1 = 1000 / 5;\nint sum2 = sum1 / 2;\nint sum3 = sum1 / sum2;\n\nIn the example above, the result of the division equation will be a whole number, as int is used as the data type. You can use double to retrieve a value with a decimal point.\n\n\n(6) The modulo (or remainder) math operation performs an integer division of one value by another, and returns the remainder of that division.\nThe operator for the modulo operation is the percentage (%) character.\nExample:\n\nint value = 23;\nint res = value % 6; // res is 5\n\nDividing 23 by 6 returns a quotient of 3, with a remainder of 5. Thus, the value of 5 is assigned to the res variable."
+    },
+    {
+      "layoutID":"1",
+      "question":"What is the output of the following code?\nint x = 14;\nSystem.out.println(x++);",
+      "correctAnswer":"14",
+      "_title": "Basic Concepts",
+      "_subtitle": "Increment and Decrement",
+      "cast": [
+        {
+          "name": "(1) Increment od Decrement Operators"
+        },
+        {
+          "name": "(2) Prefix & Postfix"
+        },
+        {
+          "name": "(3) Assignment Operators"
+        }
+      ],
+      "story": "(1) An increment or decrement operator provides a more convenient and compact way to increase or decrease the value of a variable by one. \nFor instance, the statement x=x+1; can be simplified to ++x; \nExample:\n\n		int test = 5;\n		++test; // test is now 6\n\nThe decrement operator (--) is used to decrease the value of a variable by one.\n\n		int test = 5;\n		--test; // test is now 4\n\n\nTwo forms, prefix and postfix, may be used with both the increment and decrement operators.\nWith prefix form, the operator appears before the operand, while in postfix form, the operator appears after the operand. Below is an explanation of how the two forms work:\nPrefix: Increments the variable's value and uses the new value in the expression.\nExample:\n\n	int x = 34;\n\n		int y = ++x; // y is 35\n\nThe value of x is first incremented to 35, and is then assigned to y, so the values of both x and y are now 35.\nPostfix: The variable's value is first used in the expression and is then increased.\nExample:\n\n		int x = 34;\n		int y = x++; // y is 34\n\nx is first assigned to y, and is then incremented by one. Therefore, x becomes 35, while y is assigned the value of 34.\n\n		The same applies to the decrement operator.\n\n\n(3) You are already familiar with the assignment operator (=), which assigns a value to a variable.\n\n		int value = 5;\n\nThis assigned the value 5 to a variable called value of type int.\n\nJava provides a number of assignment operators to make it easier to write code.Addition and assignment (+=):\n\n		int num1 = 4;\n		int num2 = 8;\n		num2 += num1; // num2 = num2 + num1\n\n		// num2 is 12 and num1 is 4;\n\nSubtraction and assignment (-=):\n\n	int num1 = 4;\nint num2 = 8;\n	num2 -= num1; // num2 = num2 - num1;\n // num2 is 4 and num1 is 4\n\nSimilarly, Java supports multiplication and assignment (*=), division and assignment (/=), and remainder and assignment (%=)."
+    },
+    {
+      "layoutID":"2",
+	    "question": "Fill in to print 'Hello'\n\nIs offered:\nprint\nchar\nHello\nvar\nString",
+	    "tv1":   "",
+      "pt1":   "String",
+      "tv2":   "var;\nvar='Hello';\nSystem.out.println(",
+      "pt2":   "var",
+      "tv3":    ");",
+      "_title": "Basic Concepts",
+      "_subtitle": "Strings",
+      "cast": [
+        {
+          "name": "(1) Strings"
+        },
+        {
+          "name": "(2) String Concatenation"
+        }
+      ],
+      "story": "The + (plus) operator between strings adds them together to make a new string. This process is called concatenation.\nThe resulted string is the first string put together with the second string.\nFor example:\n\n	String firstName, lastName;\n	firstName = 'David'\n;		lastName = 'Williams';\n\nSystem.out.println('My name is ' + firstName +' '+lastName);\n\n// Prints: My name is David Williams\n\nThe char data type represents a single character."
+    },
+    {
+      "layoutID":"2",
+	    "question": "Type in to get the user input.\n\nIs offered:\nnextLine\nInput\ngetLine\nScanner\nnextGet ",
+	    "tv1":   "import java.util.Scanner;\nclass test{\n\tpublic static void main(String[ ] args) {",
+      "pt1":   "Scanner",
+      "tv2":   "sc = new Scanner(System.in);\nString st = sc.",
+      "pt2":   "nextLine",
+      "tv3":    "();\n\t}\n}",
+      "_title": "Basic Concepts",
+      "_subtitle": "Getting User Input",
+      "cast": [
+        {
+          "name": "Scanner"
+        }
+      ],
+      "story": "While Java provides many different methods for getting user input, the Scanner object is the most common, and perhaps the easiest to implement. Import the Scanner class to use the Scanner object, as seen here:\n\n	import java.util.Scanner; \n\nIn order to use the Scanner class, create an instance of the class by using the following syntax:\n\n		Scanner myVar = new Scanner(System.in);\n\nYou can now read in different kinds of input data that the user enters.\nHere are some methods that are available through the Scanner class:\nRead a byte - nextByte()\nRead a short - nextShort()\nRead an int - nextInt()\nRead a long - nextLong()\nRead a float - nextFloat()\nRead a double - nextDouble()\nRead a boolean - nextBoolean()\nRead a complete line - nextLine()\nRead a word - next()\n\nExample of a program used to get user input:\n\n		import java.util.Scanner;\n\nclass MyClass {\n public static void main(String[ ] args) {\n   Scanner myVar = new Scanner(System.in);\n   System.out.println(myVar.nextLine());\n }\n}\n\n\nThis will wait for the user to input something and print that input.\nThe code might seem complex, but you will understand it all in the upcoming lessons."
+    },
+	{
+	    "layoutID":"2",
+	    "question": "Fill in the blanks to print 'Hello'.",
+	    "tv1":   "int x = 5;",
+      "pt1":   "if",
+      "tv2":   "( x == 5 ) {\n\tSystem.",
+      "pt2":   "out",
+      "tv3":    ".println('Hello');\n}",
+      "_title": "Conditional and Loops",
+      "_subtitle": "Conditional Statements",
+      "cast": [
+        {
+          "name": "(1) Decision Making"
+        },
+        {
+          "name": "(2) if...else Statements"
+        }
+      ],
+      "story": "(1) Conditional statements are used to perform different actions based on different conditions. The if statement is one of the most frequently used conditional statements.\nIf the if statement's condition expression evaluates to true, the block of code inside the if statement is executed. If the expression is found to be false, the first set of code after the end of the if statement (after the closing curly brace) is executed.\nSyntax:\n\n\tif(condition){\n\t\t//Executes when condition is true\n\t}\n\nAny of the following comparison operators may be used to form the condition:\n< less than\n> greater than\n!= not equal to\n== equal to\n<= less than or equal to\n>= greater than or equal to\n\nFor example:\n\n\t\tint x = 7;\n\tif(x < 42) {\n\t\tSystem.out.println('Hi');\n\t}\n\n\n(2) An if statement can be followed by an optional else statement, which executes when the condition evaluates to false. \nFor example:\n\n\tint age = 30;\n\tif(age< 16) {\n\t\tSystem.out.println('Too Young');\n\t}else{\n\t\tSystem.out.println('Welcome!');\n\t\n\t//Outputs 'Welcome"
+    },
+    {
+	    "layoutID":"2",
+	    "question": "Please fill in the missing parts of the nested if statement to print 'it works!' to the screen.",
+	    "tv1":   "int x = 37;\nif (x > 22) {",
+      "pt1":   "if",
+      "tv2":   "(x > 31) {\nSystem.",
+      "pt2":   "out",
+      "tv3":    ".println('it works!');",
+      "_title": "Conditional and Loops",
+      "_subtitle": "Nested if Statements",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "You can use one if-else statement inside another if or else statement.\nFor example:\n\n\tint age = 25;\n\tif(age > 0) {\n\t\tif(age > 16) {\n\t\t\tSystem.out.println('Welcome!');\n\t\telse{\n\t\t\tSystem.out.println('Too Young');\n\t\t}\n\t}else{\n\t\tSystem.out.println('Error');\n\t}\n\t//Outputs 'Welcome"
+    },
+    {
+	    "layoutID":"3",
+      "question":"An if statement can contain how many else if statements?",
+      "choiceA":"None",
+      "choiceB":"Only two",
+      "choiceC":"As many as you want",
+      "correctAnswer":"As many as you want",
+      "_title": "Conditional and Loops",
+      "_subtitle": "else if Statement",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Instead of using nested if-else statements, you can use the else if statement to check multiple conditions.\nFor example:\n\n\tint age=25;\n\n\tif(age<= 0) {\n\t\tSystem.out.println('Error');\n\t} else if(age <= 16) {\n\t\tSystem.out.println('Too Young');\n\t} else if(age < 100) {\n\t\tSystem.out.println('Welcome!');\n\t} else {\n\t\tSystem.out.println('Really?');\n\t}\n//Outputs 'Welcome!'\n\nThe code will check the condition to evaluate to true and execute the statements inside that block.\n\nYou can include as many else if statements as you need."
+    },
+    {
+      "layoutID":"1",
+	    "question":"What is the output of the following code?\n\nint a = 11; int b = 12;\nint c = 40;\nif (a > 100 || b > 3) {\n\t System.out.println(a); \n} else {\n\tSystem.out.println(c);\n}",
+      "correctAnswer":"11",
+      "_title": "Conditional and Loops",
+      "_subtitle": "Logical Statements",
+      "cast": [
+        {
+          "name": "(1) Logical Operators"
+        },
+         {
+          "name": "(2) The OR Operator"
+        }
+      ],
+      "story": "(1) Logical operators are used to combine multiple conditions.\n\nLet's say you wanted your program to output 'Welcome!' only when the variable age is greater than 18 and the variable money is greater than 500.\nOne way to accomplish this is to use nested if statements:\n\n\tif (age > 18) {\n\t\tif (money > 500) {\n\t\t\t System.out.println('Welcome!');\n\t\t}\n\t}\n\n\n\n(2) The OR operator (||) checks if any one of the conditions is true.\nThe condition becomes true, if any one of the operands evaluates to true.\n\nThe code above will print 'Welcome!' if age is greater than 18 or if money is greater than 500.\n\nThe NOT (!) logical operator is used to reverse the logical state of its operand. If a condition is true, the NOT logical operator will make it false.\n\n\nFor Example:\n\n!(age > 18) reads as 'if age is NOT greater than 18'."
+    },
+    {
+	    "question":"What is the output of the following code?\n\nint a = 11; int b = 12; int c = 40;\nswitch (a) {\n\tcase 40:\n\t\t System.out.println(b);\n\t\t break;\n\tdefault:\n\t\tSystem.out.println(c);\n}",
+      "correctAnswer":"40",
+      "_title": "Conditional and Loops",
+      "_subtitle": "The switch Statement",
+      "cast": [
+        {
+          "name": "(1) The switch Statement"
+        },
+         {
+          "name": "(2) The default Statement"
+        }
+      ],
+      "story": "A switch statement tests a variable for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each case.\n\nSyntax:\n\n\tswitch (expression) {\n\t\t case value1:\n\t\t\t//Statements\n\t\t\t break; //optional\n\t\tcase value2 :\n\t\t\t//Statements\n\t\t\t break; //optional\n\t\t\t //You can have any number of case statements.\n\t\t\t default : //Optional\n\t\t\t\t\n}\n\n\n- When the variable being switched on is equal to a case, the statements following that case will execute until a break statement is reached.\n- When a break statement is reached, the switch terminates, and the flow of control jumps to the next line after the switch statement.\n- Not every case needs to contain a break. If no break appears, the flow of control will fall through to subsequent cases until a break is reached.\n\nYou can have any number of case statements within a switch. Each case is followed by the comparison value and a colon.\n\n\n(2) A switch statement can have an optional default case.\nThe default case can be used for performing a task when none of the cases is matched.\n\nNo break is needed in the default case, as it is always the last statement in the switch"
+    },
+    {
+      "layoutID":"1",
+	    "question":"How many times will the following loop work?\nint x = 0;\nint y = 5;\nwhile (x < y) {\n\tSystem.out.println('Hello');\n\t x++;\n}",
+      "correctAnswer":"5",
+      "_title": "Conditional and Loops",
+      "_subtitle": "While Loops",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "While Loops teorija"
+    },
+    {
+      "layoutID":"1",
+	    "question":"How many times will the following loop run?\nfor (int i = 2; i < 10; i = i*i) {\n\t System.out.println(i);\n}",
+      "correctAnswer":"2",
+      "_title": "Conditional and Loops",
+      "_subtitle": "For Loops",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "For Loops teorija"
+    },
+     {
+	    "layoutID":"3",
+      "question":"How is a do while loop different from a while loop?",
+      "choiceA":"A do while loop tests the condition before running the code",
+      "choiceB":"A while loop runs the code before testing the condition",
+      "choiceC":"A do while loop runs your code at least one time",
+      "correctAnswer":"A do while loop runs your code at least one time",
+      "_title": "Conditional and Loops",
+      "_subtitle": "do while Loops",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "do while Loops teorija"
+    },
+    {
+	    "layoutID":"3",
+      "question":"In Java, an array starts counting from...",
+      "choiceA":"2",
+      "choiceB":"0",
+      "choiceC":"1",
+      "correctAnswer":"0",
+      "_title": "Arrays",
+      "_subtitle": "Arrays",
+      "cast": [
+        {
+          "name": "Initializing Arrays"
+        }
+      ],
+      "story": "Arrays teorija"
+    },
+    {
+      "layoutID":"1",
+	    "question":"Fill in the blanks to retrieve the number of elements in an array called 'test'.\n\n\ttest.____",
+      "correctAnswer":"length",
+      "_title": "Arrays",
+      "_subtitle": "Summing Elements in Arrays",
+      "cast": [
+        {
+          "name": "Array Length"
+        }
+      ],
+      "story": "Summing elements in arrays teorija"
+    },
+    {
+	    "layoutID":"2",
+	    "question": "Fill in the blanks to use the enhanced for loop for an array called 'arr':",
+	    "tv1":   "int total = 0;\nfor(int x",
+      "pt1":   ":",
+      "tv2":   "",
+      "pt2":   "arr",
+      "tv3":    ") {\n\t total += x;\n}",
+      "_title": "Arrays",
+      "_subtitle": "Enhanced for Loop",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Enhanced for Loop teorija"
+    },
+    {
+      "layoutID":"1",
+	    "question":"What is the output of this code?\nint array[ ][ ] =  {{3, 5, 8}, {7, 54, 1, 12, 4}}; \nSystem.out.println(array[0][2]);",
+      "correctAnswer":"8",
+      "_title": "Arrays",
+      "_subtitle": "Multidimensional Arrays",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "multidimensioanl arrays teorija"
+    },
+    {
+	    "layoutID":"3",
+      "question":"A class defines... ",
+      "choiceA":"behavior and values",
+      "choiceB":"attributes and values",
+      "choiceC":"behavior and attributes",
+      "correctAnswer":"behavior and attributes",
+      "_title": "Classes and Objects",
+      "_subtitle": "Object-Oriented Programming",
+      "cast": [
+        {
+          "name": "Object-Orientation"
+        }
+      ],
+      "story": "Object-Oriented Programming teorija"
+    },
+    {
+	    "layoutID":"3",
+      "question":"How many times can you call a method?",
+      "choiceA":"only two",
+      "choiceB":"one",
+      "choiceC":"as many as you want",
+      "correctAnswer":"as many as you want",
+      "_title": "Classes and Objects",
+      "_subtitle": "Methods",
+      "cast": [
+        {
+          "name": "(1) Calling Methods"
+        },
+        {
+          "name": "(2) Method Parametres)"
+        }
+      ],
+      "story": "Methods teorija"
+    },
+    {
+      "layoutID":"1",
+	    "question":"If you do not want your method to return anything, you should use the keyword:",
+      "correctAnswer":"void",
+      "_title": "Classes and Objects",
+      "_subtitle": "Method Return Types",
+      "cast": [
+        {
+          "name": "The Return Type"
+        }
+      ],
+      "story": "Method Return Types teorija"
+    },
+    {
+	    "layoutID":"2",
+	    "question": "Fill in the blanks to create a class with a single method called 'test'.",
+	    "tv1":   "public",
+      "pt1":   "class",
+      "tv2":   "A {\n\tpublic void",
+      "pt2":   "test",
+      "tv3":    "() {\n\t\t System.out.println(''Hi'');\n\t}\n}",
+      "_title": "Classes and Objects",
+      "_subtitle": "Creating Classes and Objects",
+      "cast": [
+        {
+          "name": "(1) Creating Classes"
+        },
+        {
+          "name": "(2) Creating Objects"
+        }
+      ],
+      "story": "Creating Classes and Objects teorija"
+    },
+     {
+	 "layoutID":"1",
+	    "question":"Class Atributes pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Classes and Objects",
+      "_subtitle": "Class Atributes",
+      "cast": [
+        {
+          "name": "(1) Defining Atributes"
+        },
+        {
+          "name": "(2) Creating Objects"
+        }
+      ],
+      "story": "Class Atributes teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Access Modifiers pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Classes and Objects",
+      "_subtitle": "Access Modifiers",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Access Modifiers teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Getters and Setters pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Classes and Objects",
+      "_subtitle": "Getters and Setters",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Getters and Setters teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Constructors pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Classes and Objects",
+      "_subtitle": "Constructors",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Constructors teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Value and Reference Types pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Classes and Objects",
+      "_subtitle": "Value and Reference Types",
+      "cast": [
+        {
+          "name": "(1) Value Types"
+        },
+        {
+          "name": "(1) Reference Types"
+        }
+      ],
+      "story": "Value and Reference Types teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"The Math Class pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Classes and Objects",
+      "_subtitle": "The Math Class",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "The Math Class teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Static pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Classes and Objects",
+      "_subtitle": "Static",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Static teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Final pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Classes and Objects",
+      "_subtitle": "Final",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Final teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Packages pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Classes and Objects",
+      "_subtitle": "Packages",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Packages teorija"
+    },
+    {
+	"layoutID":"1",
+	    "layoutID":"2",
+	    "question": "Fill the fields to create a valid Java code with encapsulation.\nIs offered:\nprivate\npublic\nstatic\nfinal\nString\nint",
+	    "tv1":   "public class Person {",
+      "pt1":   "private",
+      "tv2":   "int age;",
+      "pt2":   "public",
+      "tv3":    "void setAge(int age){\n\tif (age > 0) {\n\t\tthis.age = age;\n\t\t}\n\t}\n}",
+      "_title": "More on Classes",
+      "_subtitle": "Encapsulation",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Encapsulation teorija"
+    },
+    {
+	"layoutID":"1",
+      "layoutID":"1",
+	    "question":"Fill in the blank to inherit the Car class from the Vehicle class.\n\n\tclass Car_____Vehicle{}",
+      "correctAnswer":"extends",
+      "_title": "More on Classes",
+      "_subtitle": "Inheritance",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Inheritance teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Polymorphism pitanje",
+      "correctAnswer":"aaa",
+      "_title": "More on Classes",
+      "_subtitle": "Polymorphism",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Polymorphism teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Overriding and Overrloading pitanje",
+      "correctAnswer":"aaa",
+      "_title": "More on Classes",
+      "_subtitle": "Overriding and Overrloading",
+      "cast": [
+        {
+          "name": "(1) Method Overriding"
+        },
+        {
+          "name": "(2) Method Overrloading"
+        }
+      ],
+      "story": "Overriding and Overrloading teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Abstract Classes pitanje",
+      "correctAnswer":"aaa",
+      "_title": "More on Classes",
+      "_subtitle": "Abstract Classes",
+      "cast": [
+        {
+          "name": "(1) Abstraction"
+        },
+        {
+          "name": "(2) Abstract Class"
+        }
+      ],
+      "story": "Abstract Classes teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Interfaces pitanje",
+      "correctAnswer":"aaa",
+      "_title": "More on Classes",
+      "_subtitle": "Interfaces",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Interfaces teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Casting pitanje",
+      "correctAnswer":"aaa",
+      "_title": "More on Classes",
+      "_subtitle": "Casting",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Casting teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Downcasting pitanje",
+      "correctAnswer":"aaa",
+      "_title": "More on Classes",
+      "_subtitle": "Downcasting",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Downcasting teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Anonymous Classes pitanje",
+      "correctAnswer":"aaa",
+      "_title": "More on Classes",
+      "_subtitle": "Anonymous Classes",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Inner Classes teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Anonymous Classes pitanje",
+      "correctAnswer":"aaa",
+      "_title": "More on Classes",
+      "_subtitle": "Inner Classes",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Inner Classes teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"The equals() method pitanje",
+      "correctAnswer":"aaa",
+      "_title": "More on Classes",
+      "_subtitle": "The equals() method",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "The equals() method teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Enums pitanje",
+      "correctAnswer":"aaa",
+      "_title": "More on Classes",
+      "_subtitle": "Enums",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Enums teorija"
+    },
+     {
+	 "layoutID":"1",
+	    "question":"Java API pitanje",
+      "correctAnswer":"aaa",
+      "_title": "More on Classes",
+      "_subtitle": "Using the Java API",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Java API teorija"
+    },
+    {
+	     "layoutID":"3",
+      "question":"Which statements are true?",
+      "choiceA":"If we don't catch exceptions, the program can shut down",
+      "choiceB":"We cannot catch any exceptions",
+      "choiceC":"Exception catching improves program interface design",
+      "correctAnswer":"If we don't catch exceptions, the program can shut down",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "Exception Handling",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Exception Handling teorija"
+    },
+    {
+	    "layoutID":"3",
+      "question":"How many catch blocks can a try/catch block contain?",
+      "choiceA":"As many as you need",
+      "choiceB":"one",
+      "choiceC":"two",
+      "correctAnswer":"As many as you need",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "Multiple Exceptions",
+      "cast": [
+        {
+          "name": "(1) throw"
+        },
+        {
+          "name": "(2) Exception Handling"
+        }
+      ],
+      "story": "Multiple Exceptions teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":" Threads pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "Threads",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Threads teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":" Runtime vs. Checked Exceptions pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "Runtime vs. Checked Exceptions",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Runtime vs. Checked Exceptions teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Array List pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "Array List",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Array List teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Linked List pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "Linked List",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Linked List teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"HashMap pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "HashMap",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "HashMap teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Sets pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "Sets",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Sets teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Sorting Lists pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "Sorting Lists",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Sorting Lists teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Iterators pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "Iterators Lists",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Iterators teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Working with Files pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "Working with Files",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Working with Files teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Reading a File pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "Reading a File",
+      "cast": [
+        {
+          "name": ""
+        }
+      ],
+      "story": "Reading a File teorija"
+    },
+    {
+	"layoutID":"1",
+	    "question":"Creating and Writing Files pitanje",
+      "correctAnswer":"aaa",
+      "_title": "Exceptions, Lists, Threads and Files",
+      "_subtitle": "Creating and Writing Files",
+      "cast": [
+        {
+          "name": "(1) Creating Files"
+        },
+        {
+          "name": "(2) Writing Files"
+        }
+      ],
+      "story": "Creating and Writing Files teorija"
+    }
+    
+       
+  ]
+}
