@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left|top">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tvAD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:layout_weight="0.57"
+            android:textStyle="bold"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="20dp"
+            android:text="TextView" />
+
+        <EditText
+            android:id="@+id/etAD"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnCheckAD"
+            android:layout_width="123dp"
+            android:layout_height="86dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/buttons_blue"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Check" />
+
+        <Button
+            android:id="@+id/btnNextAD"
+            android:layout_width="206dp"
+            android:layout_height="66dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/buttons_greeen_next"
+            android:layout_marginBottom="40dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Next" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="373dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            >
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_Title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="0dp"
+                android:background="#737373"
+                android:gravity="left"
+                android:text="Title"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffff00" />
+
+            <TextView
+                android:id="@+id/tv_Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtitle"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cast"
+                android:layout_marginTop="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvStory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Story"
+                android:layout_marginTop="15dp"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+
